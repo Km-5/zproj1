@@ -1,0 +1,10 @@
+<mvc:View controllerName="sap.btp.project1.controller.Details" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page id="details" title="Details-page" showNavButton="true" navButtonPress="handleNavButtonPress" >
+		<VBox>
+			<Text text="{ProductName}" />
+			<Text text="{UnitPrice}" />
+			<Text text="{QuantityPerUnit}" />
+			<Text text="{UnitsInStock}" />
+		</VBox>
+	</Page>
+</mvc:View>

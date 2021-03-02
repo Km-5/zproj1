@@ -1,0 +1,12 @@
+<mvc:View controllerName="sap.btp.project1.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Shell id="View1">
+		<App id="app">
+		</App>
+	</Shell>
+</mvc:View>
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+
+
+
+
+
+
+<mvc:View
+		controllerName="sap.btp.project1.controller.List"
+		xmlns:mvc="sap.ui.core.mvc"
+        displayBlock="true"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+		xmlns:layout="sap.ui.layout"
+		height="100%">
+		<f:DynamicPage id="dynamicPageId" headerExpanded="{/headerExpanded}" toggleHeaderOnTitleClick="{/titleClickable}">
+			<!-- DynamicPage Title -->
+			<f:title>
+				<f:DynamicPageTitle>
+					<f:heading>
+						<Title text="Product list"/>
+					</f:heading>
+					<f:breadcrumbs>
+						<Breadcrumbs>
+							<Link text="Home" />
+							<Link text="Page 1" />
+							<Link text="Page 2" />
+	
+						</Breadcrumbs>
+					</f:breadcrumbs>
+					<f:expandedContent>
+						<Label text="This is a product list"/>
+					</f:expandedContent>
+					
+				
+					
+					<f:actions>
+						<Button
+								text="Edit"
+								type="Emphasized"
+								press="toggleAreaPriority"/>
+						<Button
+								text="Delete"
+								type="Transparent"/>
+						<Button
+								text="Copy"
+								type="Transparent"/>
+						
+					</f:actions>
+					<f:navigationActions>
+						<Button
+								icon="sap-icon://full-screen"
+								type="Transparent" />
+						<Button
+								icon="sap-icon://exit-full-screen"
+								type="Transparent" />
+						<Button
+								icon="sap-icon://decline"
+								type="Transparent" />
+					</f:navigationActions>
+				</f:DynamicPageTitle>
+			</f:title>
+			<!-- DynamicPage Header -->
+			<f:header>
+				<f:DynamicPageHeader pinnable="true">
+					<layout:HorizontalLayout allowWrapping="true">
+						<layout:VerticalLayout class="sapUiMediumMarginEnd">
+							<ObjectAttribute title="Location" text="Bangalore"/>
+							<ObjectAttribute title="Halway" text="23L"/>
+							<ObjectAttribute title="Rack" text="34"/>
+						</layout:VerticalLayout>
+
+						<layout:VerticalLayout>
+							<ObjectAttribute title="Availability"/>
+							<ObjectStatus text="In Stock" state="Success" />
+						</layout:VerticalLayout>
+					</layout:HorizontalLayout>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+				<List id="list" items="{/Products}">
+            <StandardListItem type="Navigation" press="handleListItemPress" title="{ProductName}"/>
+        </List>
+			</f:content>
+			<!-- DynamicPage Footer -->
+			
+		</f:DynamicPage>
+</mvc:View>
